@@ -1,7 +1,4 @@
 ## Synopsis
-A java script for sorting album covers into their specific folder
-
-## Motivation
 
 A GUI application for people in the music industry. It helps sorting files and tracks.
 
