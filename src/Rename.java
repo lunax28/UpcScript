@@ -53,21 +53,16 @@ public class Rename extends javax.swing.JFrame {
         FolderPath = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         RenameItmsp = new javax.swing.JButton();
-        UpcRename = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         textArea1 = new java.awt.TextArea();
         jLabel9 = new javax.swing.JLabel();
         sourceButton = new javax.swing.JButton();
-        sourceLabelOne = new javax.swing.JLabel();
+        LabelOne = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        sourceLabelTwo = new javax.swing.JLabel();
+        sourceLabel = new javax.swing.JLabel();
+        labelTwo = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         InfoMenu = new javax.swing.JMenuItem();
@@ -97,22 +92,6 @@ public class Rename extends javax.swing.JFrame {
             }
         });
 
-        UpcRename.setText("UPC");
-        UpcRename.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                UpcRenameActionPerformed(evt);
-            }
-        });
-
-        jLabel5.setText("Select Folder");
-
-        jButton1.setText("Tracks");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
         jButton2.setText("Sort Tracks");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,9 +99,7 @@ public class Rename extends javax.swing.JFrame {
             }
         });
 
-        jLabel6.setText("Create and Rename Folders according to upc.txt");
-
-        jLabel8.setText("Sort");
+        jLabel8.setText("Sort the tracks randomly");
 
         textArea1.addTextListener(new java.awt.event.TextListener() {
             public void textValueChanged(java.awt.event.TextEvent evt) {
@@ -139,9 +116,11 @@ public class Rename extends javax.swing.JFrame {
             }
         });
 
-        sourceLabelOne.setText("1)");
+        LabelOne.setText("1)");
 
         jLabel10.setText("Select the source folder. Album folders will be created according to the UPC List");
+
+        labelTwo.setText("2)");
 
         jMenu1.setText("File");
 
@@ -192,21 +171,6 @@ public class Rename extends javax.swing.JFrame {
                                 .addGap(7, 7, 7)
                                 .addComponent(jLabel2))
                             .addComponent(RenameItmsp)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel7))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(UpcRename)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel4))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(jLabel5))
-                            .addComponent(jButton2)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(jLabel8))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(jLabel1)
                                 .addGroup(layout.createSequentialGroup()
@@ -223,35 +187,44 @@ public class Rename extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGap(24, 24, 24)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
                             .addComponent(jLabel10)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(sourceLabelOne)
+                                .addComponent(labelTwo)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton2))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(LabelOne)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(sourceButton)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(sourceLabelTwo)))
+                                .addComponent(sourceLabel))
+                            .addComponent(jLabel8))
                         .addGap(0, 76, Short.MAX_VALUE)))
                 .addGap(27, 27, 27))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addComponent(jLabel10)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(sourceButton)
-                    .addComponent(sourceLabelTwo))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addComponent(jLabel10)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                            .addComponent(sourceButton)
+                            .addComponent(sourceLabel)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(58, 58, 58)
+                        .addComponent(LabelOne)))
+                .addGap(30, 30, 30)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelTwo)
+                    .addComponent(jButton2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel6)
-                        .addGap(28, 28, 28)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(UpcRename)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(23, 23, 23)
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
@@ -261,25 +234,12 @@ public class Rename extends javax.swing.JFrame {
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(RenameItmsp, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(23, 23, 23)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                            .addComponent(jButton1)
-                            .addComponent(jLabel7))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel8)
-                        .addGap(8, 8, 8)
-                        .addComponent(jButton2))
+                        .addGap(119, 119, 119))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel9)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(textArea1, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(17, 17, 17))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(58, 58, 58)
-                .addComponent(sourceLabelOne)
-                .addGap(411, 411, 411))
         );
 
         pack();
@@ -350,190 +310,32 @@ public class Rename extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this, "Folders renamed!*");
     }//GEN-LAST:event_RenameItmspActionPerformed
 
-    //rename the subdirectories with the relative UPC found in upc.txt
-    private void UpcRenameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpcRenameActionPerformed
-
-        JFileChooser chooser = new JFileChooser();
-        chooser.setCurrentDirectory(null);
-        chooser.setDialogTitle("Choose a folder");
-        chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-        chooser.setAcceptAllFileFilterUsed(false);
-
-        if (chooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
-
-            File sourcepath = null;
-            sourcepath = chooser.getSelectedFile();
-
-            String name = chooser.getName(sourcepath);
-            System.out.println("name is: " + name);
-            System.out.println(sourcepath.getAbsolutePath());
-
-            System.out.println("path is: " + sourcepath.toString());
-
-            if (!name.matches("[0-9]{13}")) {
-                JOptionPane.showMessageDialog(this, "The folder name must contain a valid UPC");
-                return;
-            }
-
-            String title = "Confirmation Dialog";
-            String message = "Make sure this is the correct folder! Files will be renamed, no reverse option. \n" + sourcepath.getAbsolutePath();
-
-            int reply = JOptionPane.showConfirmDialog(this, message, title, JOptionPane.YES_NO_OPTION);
-
-            if (reply == JOptionPane.YES_OPTION) {
-
-                jLabel4.setText(sourcepath.toString());
-
-            } else {
-                JOptionPane.showMessageDialog(this, "An error has occured!");
-                return;
-
-            }
-
-            if (textArea1.getText().isEmpty()) {
-                JOptionPane.showMessageDialog(this, "UPC list empty!");
-                jLabel4.setText("");
-                return;
-
-            }
-
-            Scanner r = null;
-
-            try {
-                r = new Scanner(textArea1.getText());
-
-                for (int i = 0; i < 15; i++) {
-
-                    if (r.hasNextLine()) {
-
-                        File file = new File(sourcepath.toString().concat("/").concat(r.nextLine()));
-                        file.mkdir();
-
-                    }
-                }
-            } finally {
-                if (r != null) {
-                    r.close();
-                }
-            }
-
-            /*
-        JFileChooser chooser = new JFileChooser();
-        chooser.setCurrentDirectory(null);
-        chooser.setDialogTitle("Choose a folder");
-        chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-        chooser.setAcceptAllFileFilterUsed(false);
-
-        if (chooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
-
-            File sourcepath = null;
-            sourcepath = chooser.getSelectedFile();
-
-            String name = chooser.getName(sourcepath);
-            System.out.println("name is: " + name);
-            System.out.println(sourcepath.getAbsolutePath());
-
-            System.out.println("path is: " + sourcepath.toString());
-
-            if (!name.matches("[0-9]{13}")) {
-                JOptionPane.showMessageDialog(this, "The folder name must contain a valid UPC");
-                return;
-            }
-
-            String title = "Confirmation Dialog";
-            String message = "Make sure this is the correct folder! Files will be renamed, no reverse option. \n" + sourcepath.getAbsolutePath();
-
-            int reply = JOptionPane.showConfirmDialog(this, message, title, JOptionPane.YES_NO_OPTION);
-
-            if (reply == JOptionPane.YES_OPTION) {
-
-                jLabel4.setText(sourcepath.toString());
-
-            } else {
-                JOptionPane.showMessageDialog(this, "An error has occured!");
-                return;
-
-            }
-
-            Scanner r = null;
-
-            try {
-                r = new Scanner(new BufferedReader(new FileReader("/Users/equilibrium/Desktop/upc.txt")));
-
-                for (int i = 0; i < 15; i++) {
-
-                    if (r.hasNextLine()) {
-
-                        File file = new File(sourcepath.toString().concat("/").concat(r.nextLine()));
-                        file.mkdir();
-
-                    }
-                }
-
-            } catch (FileNotFoundException ex) {
-                Logger.getLogger(Rename.class.getName()).log(Level.SEVERE, null, ex);
-            } finally {
-                if (r != null) {
-                    r.close();
-                }
-            }
-
-        }
-
-             */
-        }
-    }//GEN-LAST:event_UpcRenameActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        JFileChooser chooser = new JFileChooser();
-        chooser.setCurrentDirectory(null);
-        chooser.setDialogTitle("Choose a folder");
-        chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-        chooser.setAcceptAllFileFilterUsed(false);
-
-        if (chooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
-            File sourcepath = null;
-            sourcepath = chooser.getSelectedFile();
-            String name = chooser.getName(sourcepath);
-            System.out.println("name is: " + name);
-            System.out.println(sourcepath.getAbsolutePath());
-
-            System.out.println("path is: " + sourcepath.toString());
-
-            if (!name.matches("[0-9]{13}")) {
-                JOptionPane.showMessageDialog(this, "The folder name must be named after a valid UPC");
-                return;
-            }
-
-            String title = "Confirmation Dialog";
-            String message = "Make sure this is the correct folder! Files will be renamed, no reverse option. \n" + sourcepath.getAbsolutePath();
-
-            int reply = JOptionPane.showConfirmDialog(this, message, title, JOptionPane.YES_NO_OPTION);
-
-            if (reply == JOptionPane.YES_OPTION) {
-
-                jLabel7.setText(sourcepath.toString());
-
-            } else {
-                JOptionPane.showMessageDialog(this, "An error has occured!");
-
-            }
-        }
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 
+        if(sourceLabel.getText().isEmpty()){
+            JOptionPane.showMessageDialog(this, "No path specified!");
+            return;
+            
+        }
+        
+        
+        //check if there's tracks folder and if it contains files 
+        
+        
+        
+        
+        
         File tracksFolder = null;
-        File sourcepath = new File(jLabel7.getText());
+        File sourcepath = new File(sourceLabel.getText());
         System.out.println("sourcepath: " + sourcepath);
 
-        if (jLabel7.getText().isEmpty()) {
+        if (sourceLabel.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Select a folder with your songs first");
             return;
         }
 
         try {
-            tracksFolder = new File(jLabel7.getText() + "/" + "tracks");
+            tracksFolder = new File(sourceLabel.getText() + "/" + "tracks");
         } catch (Exception e) {
             System.out.println("Error");
         }
@@ -671,12 +473,39 @@ public class Rename extends javax.swing.JFrame {
 
             if (reply == JOptionPane.YES_OPTION) {
 
-                sourceLabelTwo.setText(sourceFolderPath.toString());
+                sourceLabel.setText(sourceFolderPath.toString());
 
             } else {
                 JOptionPane.showMessageDialog(this, "An error has occured!");
                 return;
 
+            }
+            
+            if (textArea1.getText().isEmpty()) {
+                JOptionPane.showMessageDialog(this, "UPC list empty!");
+                sourceLabel.setText("");
+                return;
+
+            }
+
+            Scanner r = null;
+
+            try {
+                r = new Scanner(textArea1.getText());
+
+                for (int i = 0; i < 15; i++) {
+
+                    if (r.hasNextLine()) {
+
+                        File file = new File(sourceFolderPath.toString().concat("/").concat(r.nextLine()));
+                        file.mkdir();
+
+                    }
+                }
+            } finally {
+                if (r != null) {
+                    r.close();
+                }
             }
         }
     }//GEN-LAST:event_sourceButtonActionPerformed
@@ -720,27 +549,22 @@ public class Rename extends javax.swing.JFrame {
     private javax.swing.JMenuItem CopyMenu;
     private javax.swing.JButton FolderPath;
     private javax.swing.JMenuItem InfoMenu;
+    private javax.swing.JLabel LabelOne;
     private javax.swing.JMenuItem PasteMenu;
     private javax.swing.JButton RenameItmsp;
-    private javax.swing.JButton UpcRename;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JLabel labelTwo;
     private javax.swing.JButton sourceButton;
-    private javax.swing.JLabel sourceLabelOne;
-    private javax.swing.JLabel sourceLabelTwo;
+    private javax.swing.JLabel sourceLabel;
     private java.awt.TextArea textArea1;
     // End of variables declaration//GEN-END:variables
 }
