@@ -423,7 +423,7 @@ public class Rename extends javax.swing.JFrame {
     }//GEN-LAST:event_CopyMenuActionPerformed
 
     private void InfoMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InfoMenuActionPerformed
-        JOptionPane.showMessageDialog(this, "Alberto Vecchi - Version 1.5");
+        JOptionPane.showMessageDialog(this, "Alberto Vecchi - Version 2.0");
     }//GEN-LAST:event_InfoMenuActionPerformed
 
     private void sourceButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sourceButtonActionPerformed
