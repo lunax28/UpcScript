@@ -2,6 +2,12 @@
 
 A GUI application for people in the music industry. It helps sorting files and tracks.
 
+## Requirements
+
+* Mac OS X or later
+* iTunes Producer
+* [Java SE Development Kit (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+
 ## Installation
 
 Go to the release section to find the executable.
