@@ -4,7 +4,7 @@ A GUI application for people in the music industry. It helps sorting files and t
 
 ## Installation
 
-I'll provide an executable wrapper soon for general users.
+Go to the release section to find the executable.
 
 ## License
 
