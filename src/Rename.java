@@ -39,6 +39,7 @@ public class Rename extends javax.swing.JFrame {
     public Rename() {
         initComponents();
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -71,6 +72,8 @@ public class Rename extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
         CopyMenu = new javax.swing.JMenuItem();
         PasteMenu = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
+        helpMenu = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -161,6 +164,18 @@ public class Rename extends javax.swing.JFrame {
         jMenu2.add(PasteMenu);
 
         jMenuBar1.add(jMenu2);
+
+        jMenu3.setText("Help");
+
+        helpMenu.setText("Info");
+        helpMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                helpMenuActionPerformed(evt);
+            }
+        });
+        jMenu3.add(helpMenu);
+
+        jMenuBar1.add(jMenu3);
 
         setJMenuBar(jMenuBar1);
 
@@ -519,6 +534,10 @@ public class Rename extends javax.swing.JFrame {
         
     }//GEN-LAST:event_SortPicsButtonActionPerformed
 
+    private void helpMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_helpMenuActionPerformed
+        JOptionPane.showMessageDialog(this, "Instructions:\n-Make your album covers first!\n-Copy and paste your UPCs into the blank box on the right.\n-Select the folder where you want your albums to be located.\n-The script creates as many folders as the numbers of UPCs in the box.\n  Additionally a folder named \"tracks\" will be created. Move there your music tracks.\n-Album covers can be sorted automatically into their respective folder.\n-Finally you can create the itmsp packages.");
+    }//GEN-LAST:event_helpMenuActionPerformed
+
     
     static String stripExtension(String str) {
         
@@ -580,6 +599,7 @@ public class Rename extends javax.swing.JFrame {
     private javax.swing.JMenuItem PasteMenu;
     private javax.swing.JButton RenameItmsp;
     private javax.swing.JButton SortPicsButton;
+    private javax.swing.JMenuItem helpMenu;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -588,6 +608,7 @@ public class Rename extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JLabel labelFour;
     private javax.swing.JLabel labelThree;
