@@ -49,12 +49,10 @@ public class Rename extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        FolderPath = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         RenameItmsp = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        sortButton = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         textArea1 = new java.awt.TextArea();
         jLabel9 = new javax.swing.JLabel();
@@ -63,6 +61,10 @@ public class Rename extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         sourceLabel = new javax.swing.JLabel();
         labelTwo = new javax.swing.JLabel();
+        labelThree = new javax.swing.JLabel();
+        SortPicsButton = new javax.swing.JButton();
+        labelFour = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         InfoMenu = new javax.swing.JMenuItem();
@@ -74,16 +76,7 @@ public class Rename extends javax.swing.JFrame {
         setLocationByPlatform(true);
         setResizable(false);
 
-        jLabel1.setText("Select Folder");
-
-        FolderPath.setText("Folder");
-        FolderPath.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                FolderPathActionPerformed(evt);
-            }
-        });
-
-        jLabel2.setText("Create itmsp package:");
+        jLabel2.setText("Create iTunes Producer packages");
 
         RenameItmsp.setText(".itmsp");
         RenameItmsp.addActionListener(new java.awt.event.ActionListener() {
@@ -92,10 +85,10 @@ public class Rename extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("Sort Tracks");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        sortButton.setText("Sort Tracks");
+        sortButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                sortButtonActionPerformed(evt);
             }
         });
 
@@ -121,6 +114,19 @@ public class Rename extends javax.swing.JFrame {
         jLabel10.setText("Select the source folder. Album folders will be created according to the UPC List");
 
         labelTwo.setText("2)");
+
+        labelThree.setText("3)");
+
+        SortPicsButton.setText("Sort Covers");
+        SortPicsButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SortPicsButtonActionPerformed(evt);
+            }
+        });
+
+        labelFour.setText("4)");
+
+        jLabel4.setText("Sort your covers automatically");
 
         jMenu1.setText("File");
 
@@ -163,135 +169,101 @@ public class Rename extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGap(16, 16, 16)
+                .addGap(24, 24, 24)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel10)
+                        .addGap(0, 49, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(LabelOne)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(sourceButton)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(7, 7, 7)
-                                .addComponent(jLabel2))
-                            .addComponent(RenameItmsp)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel1)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(FolderPath, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel3))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(sourceLabel))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel9)
-                                .addGap(56, 56, 56))
-                            .addComponent(textArea1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
+                                .addGap(48, 48, 48))))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel10)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(labelTwo)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton2))
+                                .addComponent(sortButton))
+                            .addComponent(jLabel8)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(LabelOne)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(labelThree)
+                                    .addComponent(labelFour))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(sourceButton)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(sourceLabel))
-                            .addComponent(jLabel8))
-                        .addGap(0, 76, Short.MAX_VALUE)))
-                .addGap(27, 27, 27))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(SortPicsButton)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(63, 63, 63)
+                                        .addComponent(jLabel3))
+                                    .addComponent(RenameItmsp)))
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(textArea1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(58, 58, 58)
+                        .addComponent(LabelOne)
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(labelTwo)
+                            .addComponent(sortButton))
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(labelThree)
+                            .addComponent(SortPicsButton))
+                        .addGap(27, 27, 27)
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                            .addComponent(jLabel3)
+                            .addComponent(RenameItmsp, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelFour)))
+                    .addGroup(layout.createSequentialGroup()
                         .addGap(31, 31, 31)
                         .addComponent(jLabel10)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                                    .addComponent(sourceButton)
+                                    .addComponent(sourceLabel)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(27, 27, 27)
+                                .addComponent(jLabel9)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                            .addComponent(sourceButton)
-                            .addComponent(sourceLabel)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(58, 58, 58)
-                        .addComponent(LabelOne)))
-                .addGap(30, 30, 30)
-                .addComponent(jLabel8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelTwo)
-                    .addComponent(jButton2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                            .addComponent(FolderPath)
-                            .addComponent(jLabel3))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(RenameItmsp, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(119, 119, 119))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel9)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(textArea1, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(17, 17, 17))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void FolderPathActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FolderPathActionPerformed
-        JFileChooser chooser = new JFileChooser();
-        chooser.setCurrentDirectory(null);
-        chooser.setDialogTitle("Choose a folder");
-        chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-        chooser.setAcceptAllFileFilterUsed(false);
-
-        if (chooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
-            File sourcepath = null;
-            sourcepath = chooser.getSelectedFile();
-            String name = chooser.getName(sourcepath);
-            System.out.println("name is: " + name);
-            System.out.println(sourcepath.getAbsolutePath());
-
-            System.out.println("path is: " + sourcepath.toString());
-
-            if (!name.matches("[0-9]{13}")) {
-                JOptionPane.showMessageDialog(this, "The folder name must contain a valid UPC");
-                return;
-            }
-
-            String file_name = sourcepath.toString();
-            //JOptionPane.showMessageDialog(this.frame, file_name);
-            String title = "Confirmation Dialog";
-            String message = "Make sure this is the correct folder! Files will be renamed, no reverse option. \n" + sourcepath.getAbsolutePath();
-
-            int reply = JOptionPane.showConfirmDialog(this, message, title, JOptionPane.YES_NO_OPTION);
-
-            if (reply == JOptionPane.YES_OPTION) {
-
-                jLabel3.setText(sourcepath.toString());
-
-            } else {
-                JOptionPane.showMessageDialog(this, "An error has occured!");
-
-            }
-        }
-    }//GEN-LAST:event_FolderPathActionPerformed
-
     //concatenates .itmsp to the subdirectories in jLabel3.getText()
     private void RenameItmspActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RenameItmspActionPerformed
-        if (jLabel3.getText().isEmpty()) {
+        if (sourceLabel.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Select a folder first");
             return;
         }
         File sourcepath = null;
-        sourcepath = new File(jLabel3.getText());
+        sourcepath = new File(sourceLabel.getText());
 
         System.out.println(sourcepath);
 
@@ -310,37 +282,33 @@ public class Rename extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this, "Folders renamed!*");
     }//GEN-LAST:event_RenameItmspActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void sortButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sortButtonActionPerformed
 
-        if(sourceLabel.getText().isEmpty()){
+        if (sourceLabel.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, "No path specified!");
             return;
-            
+
         }
-        
-        
+
         //check if there's tracks folder and if it contains files 
-        
-        
-        
-        
-        
         File tracksFolder = null;
         File sourcepath = new File(sourceLabel.getText());
         System.out.println("sourcepath: " + sourcepath);
 
-        if (sourceLabel.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Select a folder with your songs first");
-            return;
-        }
-
-        try {
+        try {            
             tracksFolder = new File(sourceLabel.getText() + "/" + "tracks");
-        } catch (Exception e) {
-            System.out.println("Error");
-        }
-        System.out.println(tracksFolder);
+            if (!tracksFolder.exists() || !tracksFolder.isDirectory()) {
+                JOptionPane.showMessageDialog(this, "tracks folder was NOT found!");
+                return;
+            }
 
+        } catch (Exception e) {
+            System.out.println("Error Exception");
+        }
+        
+        System.out.println("tracksFolder:" + tracksFolder);
+
+        //array of files contained in the source folder
         File listRoot[] = sourcepath.listFiles();
 
         if (listRoot == null) {
@@ -407,7 +375,7 @@ public class Rename extends javax.swing.JFrame {
         }
 
 
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_sortButtonActionPerformed
 
     private void textArea1TextValueChanged(java.awt.event.TextEvent evt) {//GEN-FIRST:event_textArea1TextValueChanged
         // TODO add your handling code here:
@@ -426,9 +394,7 @@ public class Rename extends javax.swing.JFrame {
         try {
             result = (String) clipboard.getData(DataFlavor.stringFlavor);
             textArea1.setText(result);
-        } catch (UnsupportedFlavorException ex) {
-            Logger.getLogger(Rename.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
+        } catch (UnsupportedFlavorException | IOException ex) {
             Logger.getLogger(Rename.class.getName()).log(Level.SEVERE, null, ex);
         }
 
@@ -442,7 +408,7 @@ public class Rename extends javax.swing.JFrame {
     }//GEN-LAST:event_CopyMenuActionPerformed
 
     private void InfoMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InfoMenuActionPerformed
-        JOptionPane.showMessageDialog(this, "Alberto Vecchi - Version 1.1");
+        JOptionPane.showMessageDialog(this, "Alberto Vecchi - Version 1.5");
     }//GEN-LAST:event_InfoMenuActionPerformed
 
     private void sourceButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sourceButtonActionPerformed
@@ -480,7 +446,7 @@ public class Rename extends javax.swing.JFrame {
                 return;
 
             }
-            
+
             if (textArea1.getText().isEmpty()) {
                 JOptionPane.showMessageDialog(this, "UPC list empty!");
                 sourceLabel.setText("");
@@ -508,8 +474,70 @@ public class Rename extends javax.swing.JFrame {
                 }
             }
         }
+
+        File file = new File((sourceLabel.getText() + "/" + "tracks"));
+        file.mkdir();
     }//GEN-LAST:event_sourceButtonActionPerformed
 
+    private void SortPicsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SortPicsButtonActionPerformed
+        
+        //A list of all the files in our source path
+        File listRoot[] = sourceFolderPath.listFiles();
+       
+        int count = 0;
+        //looping over all the files in our source path
+        while (count < listRoot.length && listRoot[count].exists()) {
+            
+            //if a file IS a directory or its extension is .jpg do, else return
+            if (listRoot[count].isDirectory() || listRoot[count].getName().substring(listRoot[count].getName().lastIndexOf(".")).equals(".jpg")) {
+
+                //if the previous folder name is equal to the next file name without its extension MOVE, else return
+                if (stripExtension(listRoot[count - 1].getName()).equals(stripExtension(listRoot[count].getName()))) {
+                    System.out.println("ok");
+
+                    try {
+
+                        if (listRoot[count].renameTo(new File(listRoot[count - 1] + "/" + listRoot[count].getName()))) {
+                            System.out.println("File is moved successfully!");
+                        } else {
+                            System.out.println("an error has occured");
+                            return;
+                        }
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+
+                } else {
+                    System.out.println("not equal!");
+                    return;
+                }
+
+            }
+            count = count + 2;
+        }  
+        
+    }//GEN-LAST:event_SortPicsButtonActionPerformed
+
+    
+    static String stripExtension(String str) {
+        
+        // Handle null case specially.
+        if (str == null) {
+            return null;
+        }
+
+        // Get position of last '.'.
+        int pos = str.lastIndexOf(".");
+
+        // If there wasn't any '.' just return the string as is.
+        if (pos == -1) {
+            return str;
+        }
+
+        // Otherwise return the string, up to the dot.
+        return str.substring(0, pos);
+    }
     /**
      * @param args the command line arguments
      */
@@ -547,22 +575,24 @@ public class Rename extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem CopyMenu;
-    private javax.swing.JButton FolderPath;
     private javax.swing.JMenuItem InfoMenu;
     private javax.swing.JLabel LabelOne;
     private javax.swing.JMenuItem PasteMenu;
     private javax.swing.JButton RenameItmsp;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton SortPicsButton;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JLabel labelFour;
+    private javax.swing.JLabel labelThree;
     private javax.swing.JLabel labelTwo;
+    private javax.swing.JButton sortButton;
     private javax.swing.JButton sourceButton;
     private javax.swing.JLabel sourceLabel;
     private java.awt.TextArea textArea1;
